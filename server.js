@@ -14,8 +14,7 @@ const middlewares = jsonServer.defaults();
 // Usa os middlewares
 server.use(middlewares);
 
-// Rotas personalizadas (opcional)
-// Exemplo: Atualizar status de uma tarefa via PATCH
+
 server.patch('/tarefas/:id/status', (req, res) => {
   const id = Number(req.params.id);
   const { status } = req.body;
